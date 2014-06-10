@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     
+        
+     
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f2eb"
+    android:shrinkColumns="*"
+    android:stretchColumns="*">
+     
+ 
+ 
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+ 
+ 
+        <TextView
+            android:id="@+id/title_new_bill"
+            android:layout_width="fill_parent"
+            android:background ="#FF6857"
+            android:layout_height="55dp"
+            android:textAlignment="center"
+            android:gravity="center"
+                        android:padding="5dp"
+            android:textSize ="34sp"
+            android:text = "New Bill"
+            android:textColor ="#ffffff"/>
+    </TableRow>
+ 
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+ 
+        <TextView
+            android:id="@+id/balance"
+            android:background ="#ffa89e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balance:"
+            android:textStyle = "bold"
+            android:padding = "10dp"
+            android:textSize ="16sp"
+            android:textColor = "#ffffff"/>
+    </TableRow>
+ 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="9.69"
+        android:layout_margin = "50dp"
+ 
+        android:orientation="vertical" >
+ 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESTAURANT"
+            android:textSize = "14sp"
+            android:layout_marginBottom = "5dp"/>
+ 
+ 
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_rest"
+            android:background = "#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:padding = "10dp"
+            android:layout_marginBottom="10dp"
+            android:hint = "E.g. Red Lobster"/>
+ 
+        <TextView
+            android:id="@+id/textView2"
+             
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMOUNT SPENT"
+            android:textSize = "14sp"
+            android:layout_marginBottom = "5dp"/>
+ 
+       <EditText
+            android:id="@+id/amount_edit"
+            android:background = "#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="20dp"
+            android:padding = "10dp"
+            android:inputType="phone"
+            android:hint = "19.99"/>
+         
+ 
+        <Button
+            android:id="@+id/submit_button"
+            android:background ="#FF6857"
+            android:textColor="#ffffff"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:textSize ="20sp"
+            android:textStyle ="bold"
+            android:text="SUBMIT BILL" />
+ 
+    </LinearLayout>
+ 
+</TableLayout>
+ 
+<Button
+    android:id="@+id/cancel_button"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:background="@drawable/cancelbutton"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop ="8dp" />
+ 
+</RelativeLayout>

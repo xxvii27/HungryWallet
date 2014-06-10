@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.taste.hunfrywallet"
+    android:versionCode="2"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+
+    <application
+        android:name="com.taste.hunfrywallet.HungryWalletApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+            android:theme="@style/generalnotitle" >
+
+        <!--
+        	Replace android:name="com.tast.hunfrywallet.WithActivityToDisplayFirst"
+         	-e6hwang
+        -->
+
+        <activity
+            android:name="com.taste.hunfrywallet.DispatchActivity"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.SignUpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.SignUpOrLoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.MainActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.RecordActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.SubmitBillActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.SubmitBudgetActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.SearchActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/title_activity_search"
+            android:parentActivityName="com.taste.hunfrywallet.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.taste.hunfrywallet.MainActivity" />
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.DisplaySearchResultsActivity"
+           	android:theme="@style/generalnotitle"
+            android:label="@string/title_activity_display_search_results"
+            android:parentActivityName="com.taste.hunfrywallet.SearchActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.taste.hunfrywallet.SearchActivity" />
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.AnalysisActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.SummaryActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.ProjectionsActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity
+            android:name="com.taste.hunfrywallet.GraphsActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

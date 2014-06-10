@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding = "10dp">
+    <!-- When selected, use grey -->
+    <item android:drawable="@drawable/search_photo"
+          android:state_selected="true"
+          android:padding = "10dp" />
+    <!-- When not selected, use white-->
+    <item android:drawable="@drawable/search_photo"
+        android:padding = "10dp"
+       />
+</selector>

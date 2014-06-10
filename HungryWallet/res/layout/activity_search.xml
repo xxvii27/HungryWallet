@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableLayout
+        android:id="@+id/search_title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f3eb"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+
+        <!-- Row 1 with single column -->
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+        >
+
+           <TextView
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="@string/search_lcase"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="38sp" 
+                
+                android:background ="@drawable/banner" />
+
+           
+            
+        </TableRow>
+        
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:src="@drawable/noodles"
+                        android:contentDescription="@string/spoon_fork_image" />
+                    
+                    <TextView 
+                        android:id = "@+id/greeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity = "center"
+                        android:text ="@string/going_out_to_eat"
+                        android:layout_marginBottom="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+           
+
+                <EditText
+                    android:id="@+id/edit_foodsearch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:drawableLeft="@drawable/mag"
+                    android:gravity="center"
+                    android:hint="@string/edit_foodsearch"
+                    android:padding="7dp"
+                    android:textSize="16dp"
+                    android:cursorVisible="false" />
+                
+                <Button
+                    android:id="@+id/search_by_pref"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/rounded_bottom_button"
+                    android:onClick="sendPrefMessage"
+                    android:text="@string/button_send"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical" >
+
+                    <SeekBar
+                        android:id="@+id/seekBar1"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:thumbOffset="-8dp"
+                        android:paddingLeft="36dp"
+                        android:paddingRight="36dp"
+                        android:layout_gravity = "center"
+                        android:max="4" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:layout_gravity = "center"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/search_by_price"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sign_in_button"
+                    android:onClick="sendPriceMessage"
+                    android:text="@string/button_search_price"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+
+
+</LinearLayout>
+    </TableLayout>
+
+    <Button
+    android:id="@+id/logout_button"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:background="@drawable/logout"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop ="6.5dp" />
+</RelativeLayout>

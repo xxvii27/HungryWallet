@@ -1,0 +1,5 @@
+int drawable ic_launcher 0x7f020000
+int drawable popup_blue 0x7f020001
+int drawable popup_green 0x7f020002
+int drawable popup_red 0x7f020003
+int string app_name 0x7f030000

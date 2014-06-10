@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:shrinkColumns="*"
+    android:stretchColumns="*">
+
+    <!-- Row 1 with single column -->
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/welcome_back"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:background="#000000"
+            android:gravity="center"
+            android:padding="8dip"
+            android:text="WELCOME BACK"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:typeface="sans" />
+    </TableRow>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/firstpagebackground"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+     >
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize = "14sp"
+        android:padding = "10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom ="2dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="@string/prompt_username"
+        android:inputType="textEmailAddress"
+        android:typeface="sans" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom ="2dp"
+        android:textSize = "14sp"
+        android:padding = "10dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="@string/prompt_password"
+        android:imeActionId="@+id/login"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionUnspecified"
+        android:inputType="textPassword">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/action_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_bottom_button"
+        android:padding="10dp"
+        android:textStyle = "bold"
+        android:textSize = "16sp"
+        android:text="@string/action_sign_in_short"
+        android:textColor="#ffffff"
+        android:textColorHint="#000000" 
+        />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/reset"
+        android:layout_centerHorizontal="true"
+        android:text="@string/resetpwd" />
+
+    <Button
+        android:id="@+id/reset"
+        android:padding ="7dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:alpha="0"
+        android:background="#000000"
+        android:clickable="true"
+        android:ems="10"
+        android:enabled="true"
+        android:gravity="bottom"
+        android:linksClickable="true"
+        android:longClickable="true"
+        android:text="@string/resetpwd"
+        android:textAlignment="center"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
+</TableLayout>

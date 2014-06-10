@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5" >
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="4"
+            android:layout_marginTop = "30dp"
+            android:gravity="center_vertical" >
+
+            <com.taste.hunfrywallet.PieGraph
+                android:id="@+id/piegraph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                app:pieInnerCircleRatio="200"
+                app:pieSlicePadding="0dip" />
+
+            <TextView
+                android:id="@+id/percentageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/piegraph"
+                android:layout_alignLeft="@+id/piegraph"
+                android:layout_alignRight="@+id/piegraph"
+                android:layout_alignTop="@+id/piegraph"
+                android:layout_margin="1dp"
+                android:textSize = "18dp"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/relativelayoutText"
+            android:layout_width="fill_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width = "wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginRight = "7dp" >
+
+                <TextView
+                    android:id="@+id/textRemaining"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignLeft="@+id/remaining"
+                    android:layout_marginBottom="5dp"
+                    android:text="Small Text"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/remaining"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/register_button"
+                    android:padding = "7dp"
+                    android:text="Medium Text"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width = "wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft = "7dp" >
+
+                <TextView
+                    android:id="@+id/textBudget"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Small Text"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/budget"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:padding = "7dp"
+                    android:background="@drawable/register_button"
+                    android:text="Medium Text"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+
+</RelativeLayout>

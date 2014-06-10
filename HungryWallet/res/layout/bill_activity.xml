@@ -1,0 +1,104 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f3eb"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" > 
+    
+    
+
+    <!-- Row 1 with single column -->
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_span="2"
+            android:textSize ="38sp"
+            android:background="@drawable/banner"
+            android:gravity="center"
+            android:text = "my bills"
+            android:textColor ="#ffffff"
+            android:textStyle = "bold"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_weight="0"
+            android:textSize ="20sp"
+            android:textStyle = "bold"
+            android:background="#a11f14"
+            android:gravity="center"
+            android:padding="12dip"
+            android:text="Balance"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/balance_amount"
+                        android:textSize ="20sp"
+                        android:textStyle = "bold"
+            android:layout_weight="1"
+            android:background="#a11f14"
+            android:gravity="center"
+            android:padding="12dip"
+            android:text=""
+            android:textColor="#ffffff" />
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:textColor="#000000" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:background = "@drawable/addbillbutton"
+            android:layout_height="54dp"
+            android:textSize = "30sp"
+            android:text = "add a new bill"/>
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize = "12sp"
+            android:color="#000000" >
+        </ListView>
+    </LinearLayout>
+    
+    
+
+</TableLayout> 
+
+        <Button
+    android:id="@+id/logout_button"
+            android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:background="@drawable/logout"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop ="6.5dp" />
+
+
+</RelativeLayout>

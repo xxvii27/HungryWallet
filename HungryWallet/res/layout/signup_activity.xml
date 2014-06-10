@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <!-- Row 1 with single column -->
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/signupbanner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:background="#000000"
+            android:gravity="center"
+            android:padding="8dip"
+            android:text="JOIN THE CLUB"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:typeface="sans" />
+    </TableRow>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/firstpagebackground"
+        android:paddingTop="20dp" >
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passwordAgain"
+        
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint="@string/enteremail"
+            android:inputType="textEmailAddress"
+            android:padding = "14dp"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:textColor ="#000000" />
+
+        <Button
+            android:id="@+id/signup"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="2dp"
+			android:background="@drawable/rounded_bottom_button"
+            android:padding="10dp"
+            android:textStyle = "bold"
+            android:textSize = "20dp"
+            android:text="@string/signup"
+            android:textColor="#ffffff"
+            android:textColorHint="#000000" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/passwordAgain"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint="@string/enterpassword"
+            android:inputType="textPassword"
+            android:textColor ="#000000"
+            android:padding = "14dp"
+            android:textSize="16sp"
+             />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/password"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="60dp"
+            android:padding = "14dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="@string/enterusername"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:textColor ="#000000"
+            />
+
+        <EditText
+            android:id="@+id/passwordAgain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint="@string/enterpasswordagain"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:textColor ="#000000"
+            android:padding = "14dp"/>
+    </RelativeLayout>
+
+</TableLayout>
