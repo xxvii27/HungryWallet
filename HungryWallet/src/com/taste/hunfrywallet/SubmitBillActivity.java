@@ -99,10 +99,11 @@ public class SubmitBillActivity extends Activity {
                         generateRestaurant();
  
                         try {
-                            userBudget.save();
-                        } catch (ParseException e) {
-                            userBudget.saveEventually();
-                        }
+							userBudget.save();
+						} catch (ParseException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
                          
                         finish();
                     }

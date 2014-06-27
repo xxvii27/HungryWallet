@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#f7f2eb" >
+
+    <TextView
+            android:id="@+id/textView_label_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESTAURANT"
+            android:textSize = "14sp"
+            android:layout_marginBottom = "5dp"/>
+    
+     <EditText
+            android:id="@+id/edit_rest"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:padding = "10dp"
+            android:layout_marginBottom="10dp"
+            android:hint = "E.g. Red Lobster"/>
+     
+     <TextView
+            android:id="@+id/label_spent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMOUNT SPENT"
+            android:textSize = "14sp"
+            android:layout_marginBottom = "5dp"/>
+ 
+     <EditText
+            android:id="@+id/edit_amount"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="20dp"
+            android:padding = "10dp"
+            android:inputType="phone"
+            android:hint = "19.99"/>
+         
+
+</LinearLayout>

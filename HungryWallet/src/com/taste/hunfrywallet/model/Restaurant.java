@@ -116,6 +116,16 @@ public class Restaurant extends ParseObject{
 			return false;
 	}
 	
+	public boolean decTotalExpense(double expense) {
+		if ( expense >= 0 ) {
+			this.totalExpense = getDouble("totalExpense") - expense;
+			put("totalExpense", totalExpense);
+			return true;
+		}
+		else
+			return false;
+	}
+	
 	public int getNumberOfVisits() {
 		return numberOfVisits;
 	}
@@ -126,6 +136,7 @@ public class Restaurant extends ParseObject{
 	}	
 	
 	public void decNumberOfVisits() {
-		this.numberOfVisits -= 1;
+		numberOfVisits = getInt("visits") - 1;
+		put("visits", numberOfVisits);
 	}	
 }

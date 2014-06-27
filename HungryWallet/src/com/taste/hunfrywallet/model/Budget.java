@@ -10,6 +10,7 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 
 import com.parse.ParseClassName;
+import com.parse.ParseException;
 import com.parse.ParseObject;
 
 /**
@@ -57,9 +58,22 @@ public class Budget extends ParseObject {
 	}
 	
 	@SuppressLint("UseValueOf")
-	public void updateRemainingBudget(double expense) {
-		put("remainingBudget", new Double(getDouble("remainingBudget") - expense));
-		this.remainingBudget = getDouble("remainingBudget") - expense;
+	public void updateRemainingBudget(double expense, int status) {
+		if(status == 0){
+			put("remainingBudget", new Double(getDouble("remainingBudget") - expense));
+			this.remainingBudget = getDouble("remainingBudget") - expense;
+		}
+		else{
+			put("remainingBudget", new Double(getDouble("remainingBudget") + expense));
+			this.remainingBudget = getDouble("remainingBudget") + expense;
+			try {
+				save();
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				saveEventually();
+			}
+			
+		}
 	}
 	
 	
@@ -67,12 +81,23 @@ public class Budget extends ParseObject {
 	public void setRemainingBudget(double remainingBudget){
 		put("remainingBudget", new Double(remainingBudget));
 		this.remainingBudget = remainingBudget;
+
 	}
 	
 	public void addBill(Bill bill){
 		add("Bills", bill);
-		updateRemainingBudget(bill.getExpense());
+		updateRemainingBudget(bill.getExpense(), 0);
 		saveEventually();
+	}
+	
+	public void deleteBill(Bill bill){
+		try {
+			bill.delete();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			bill.deleteEventually();
+		}
+		updateRemainingBudget(bill.getDouble("expense"), 1);
 	}
 	
 	
